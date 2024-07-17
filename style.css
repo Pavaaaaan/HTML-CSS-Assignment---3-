@@ -1,0 +1,188 @@
+/* Ensure text size remains consistent on zoom */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Base font size */
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px; /* Fixed size */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a img {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    font-size: 24px; /* Fixed size */
+}
+
+.intro {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f1f1f1;
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    width: 30%;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px; /* Fixed size */
+}
+
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 16px; /* Fixed size */
+}
+
+.services h2 {
+    margin-bottom: 30px;
+    font-size: 24px; /* Fixed size */
+}
+
+.service {
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+}
+
+.service h3 {
+    margin-top: 15px;
+    font-size: 20px; /* Fixed size */
+}
+
+.service p {
+    margin: 15px 0;
+    font-size: 16px; /* Fixed size */
+}
+
+.service button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Fixed size */
+}
+
+.service button:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    nav ul, .social-icons {
+        justify-content: space-between;
+    }
+    
+    .intro {
+        flex-direction: column;
+    }
+    
+    .intro-text {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .service {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        padding: 10px;
+        bottom: 10px;
+        left: 10px;
+    }
+    
+    .service button {
+        width: 100%;
+        padding: 15px;
+    }
+}
